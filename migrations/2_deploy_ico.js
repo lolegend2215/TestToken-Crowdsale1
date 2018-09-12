@@ -11,7 +11,7 @@ const duration = {
 };
 
 module.exports = async function(deployer, network, accounts) {
-  deployer.deploy(TestToken, "Test Token", "TTS", 18, 1000).then(async () => {
+  deployer.deploy(TestToken, "Test Token", "TTS", 18, 1000000000).then(async () => {
     const deployedToken = await TestToken.deployed();
     console.log(deployedToken.address)
     //       uint256 _rate,
